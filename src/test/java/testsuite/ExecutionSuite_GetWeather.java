@@ -16,8 +16,8 @@ import pageObjects.HomePage;
 
 public class ExecutionSuite_GetWeather extends BaseTestClass{
 	
-	String tempReadingFromUI;
-	String tempReadingFromAPI;
+	public static String tempReadingFromUI=null;
+	public static String tempReadingFromAPI=null;
 	
 	
 	@Test
@@ -28,15 +28,9 @@ public class ExecutionSuite_GetWeather extends BaseTestClass{
 		homePage.fillSearchBox();
 		homePage.selectCity("Hisar, Haryana, IN");
 		CityTempScreen cityTemp = CityTempScreen.getInstance();
-		tempReadingFromUI=cityTemp.getTemp();
+		tempReadingFromUI=cityTemp.getTemp().substring(0,2);
 		System.out.println(tempReadingFromUI);
-		
-	}
 	
-	
-
-	@Test
-	public void getTempFrAPI() {
 		
 		Response response = given().
 				spec(requestSpec).
@@ -54,9 +48,10 @@ public class ExecutionSuite_GetWeather extends BaseTestClass{
 		
 		System.out.println(temp);
 		
-	//	String tempReadingFromAPI= String.valueOf(temp);
+	String tempReadingFromAPI= String.valueOf(temp);
+	System.out.println("ui temprature"+tempReadingFromUI);
 		
-	//	Assert.assertEquals(tempReadingFromAPI, tempReadingFromUI);
+    Assert.assertEquals(tempReadingFromAPI, tempReadingFromUI);
 		
 	}
 	

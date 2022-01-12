@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testsuite.ExecutionSuite_GetWeather" class="method navigator-link" hash-for-method="getTemp">getTemp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testsuite.ExecutionSuite_GetWeather" class="method navigator-link" hash-for-method="getTempFrAPI">getTempFrAPI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testsuite.ExecutionSuite_GetWeather" class="method navigator-link" hash-for-method="getTempFrUI">getTempFrUI</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,9 +132,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getTemp">
-                  </a> <!-- getTemp -->
-                  <span class="method-name">getTemp</span>
+                  <a name="getTempFrAPI">
+                  </a> <!-- getTempFrAPI -->
+                  <span class="method-name">getTempFrAPI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTempFrUI">
+                  </a> <!-- getTempFrUI -->
+                  <span class="method-name">getTempFrUI</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,16 +199,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getTemp')
+data.setCell(0, 1, 'getTempFrUI')
 data.setCell(0, 2, 'testsuite.ExecutionSuite_GetWeather')
-data.setCell(0, 3, 11611);
+data.setCell(0, 3, 10588);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'getTempFrAPI')
+data.setCell(1, 2, 'testsuite.ExecutionSuite_GetWeather')
+data.setCell(1, 3, 1557);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -223,13 +239,25 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testsuite.ExecutionSuite_GetWeather</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setBaseURI</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeSuite(chrome)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">311 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">getTemp</span>
-                <span class="method-start">1473 ms</span>
+                <span class="method-name">getTempFrAPI</span>
+                <span class="method-start">3228 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeSuite(chrome)</span>
+                <span class="method-start">4788 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">getTempFrUI</span>
+                <span class="method-start">5677 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,7 +6,8 @@
       <class name="testsuite.ExecutionSuite_GetWeather">
         <methods>
           <include name="beforeSuite"/>
-          <include name="getTemp"/>
+          <include name="setBaseURI"/>
+          <include name="getTempFrAPI"/>
         </methods>
       </class> <!-- testsuite.ExecutionSuite_GetWeather -->
     </classes>

@@ -17,7 +17,7 @@ import utils.BasePage;
 
 public class BaseTestClass{
 	
-          static WebDriver driver;
+          WebDriver driver;
           BasePage basePage;
 
           protected static RequestSpecification requestSpec;

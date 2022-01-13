@@ -48,8 +48,13 @@ public class ExecutionSuite_GetWeather extends BaseTestClass{
 		
 		System.out.println(temp);
 		
-	String tempReadingFromAPI= String.valueOf(temp);
-	System.out.println("ui temprature"+tempReadingFromUI);
+		double kelvinTopCelcius=temp-273.15;
+		
+	String value= String.valueOf(kelvinTopCelcius);
+	
+	String tempReadingFromAPI= value.substring(0,2);
+		
+	
 		
     Assert.assertEquals(tempReadingFromAPI, tempReadingFromUI);
 		

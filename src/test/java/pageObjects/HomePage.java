@@ -5,6 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import global.GlobalData;
 import utils.BasePage;
@@ -12,6 +14,7 @@ import utils.BasePage;
 public class HomePage extends BasePage {
 	
 	static HomePage instance;
+	 WebDriverWait wait;
 
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -43,8 +46,10 @@ public class HomePage extends BasePage {
 	 
 	 
 	 
-	 public void fillSearchBox() {
-		 sendText(searchBox,"Hisar");	 
+	 public void fillSearchBox(String city) {
+		  wait = new WebDriverWait(driver, 15);
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(searchBox));
+		 sendText(searchBox,city);	 
 		 
 	 }
 	 
